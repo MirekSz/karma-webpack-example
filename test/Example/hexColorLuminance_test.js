@@ -14,5 +14,9 @@ describe("hexColorLuminance", function () {
         div.style.backgroundColor = hexColorLuminance.luminate("#fff", "-0.5");
         expect(div.style.backgroundColor).to.be.empty;
     });
+    it("should jquery exist ", function () {
+        var finded = $(document.body);
+        expect(finded).not.be.empty;
+    });
 
 });

@@ -4,6 +4,7 @@ module.exports = function (config) {
 
         files: [
             // all files ending in "test"
+            './node_modules/jquery/dist/jquery.js',
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
             './test/**/*.js'
             // each file acts as entry point for the webpack configuration
