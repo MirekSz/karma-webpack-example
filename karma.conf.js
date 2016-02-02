@@ -18,7 +18,7 @@ module.exports = function (config) {
             'test/test.js': ['webpack']
         },
 
-        reporters: ['spec', 'coverage', 'junit'],
+        reporters: ['spec', 'junit', 'coverage',],
 
         junitReporter: {
             outputFile: 'test-results.xml'
