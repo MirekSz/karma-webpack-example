@@ -18,7 +18,7 @@ module.exports = function (config) {
             'test/test.js': ['webpack']
         },
 
-        reporters: ['spec', 'junit', 'coverage',],
+        reporters: ['spec', 'junit', 'coverage'],
 
         junitReporter: {
             outputFile: 'test-results.xml'
@@ -31,6 +31,7 @@ module.exports = function (config) {
 
         webpack: {
             // webpack configuration
+            devtool: 'inline-source-map',
             module: {
                 loaders: [
                     {test: /\.css$/, loader: "style!css"},
