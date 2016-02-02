@@ -23,7 +23,7 @@ module.exports = function (config) {
         junitReporter: {
             outputFile: 'test-results.xml'
         },
-
+        singleRun: true,
         coverageReporter: {
             type: 'html',
             dir: 'build/coverage/'
