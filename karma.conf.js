@@ -64,7 +64,8 @@ module.exports = function (config) {
             require("karma-coverage"),
             require("karma-phantomjs-launcher"),
             require("karma-spec-reporter"),
-            require("karma-junit-reporter")
+            require("karma-junit-reporter"),
+            require("karma-sourcemap-loader")
         ],
 
         browsers: ['PhantomJS']
