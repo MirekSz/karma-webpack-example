@@ -5,7 +5,7 @@ module.exports = function (config) {
         files: [
             // all files ending in "test"
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            'test/**/*.js'
+            'test/test.js'
             // each file acts as entry point for the webpack configuration
         ],
 
@@ -15,7 +15,7 @@ module.exports = function (config) {
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            'test/**/*.js': ['webpack', 'sourcemap']
+            './test/**/*.js': ['webpack', 'sourcemap']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
@@ -30,7 +30,6 @@ module.exports = function (config) {
         },
 
         webpack: {
-            // webpack configuration
             devtool: 'inline-source-map',
             module: {
                 loaders: [
@@ -53,8 +52,7 @@ module.exports = function (config) {
         },
 
         webpackMiddleware: {
-            // webpack-dev-middleware configuration
-            noInfo: true
+            noInfo: false
         },
 
         plugins: [
