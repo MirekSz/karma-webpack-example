@@ -5,17 +5,17 @@ module.exports = function (config) {
         files: [
             // all files ending in "test"
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            'test/test.js'
+            './test/**/*.js'
             // each file acts as entry point for the webpack configuration
         ],
 
         // frameworks to use
-        frameworks: ['mocha'],
+        frameworks: ['source-map-support', 'mocha'],
 
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            './test/**/*.js': ['webpack', 'sourcemap']
+            './test/**/*.js': ['webpack']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
@@ -59,6 +59,7 @@ module.exports = function (config) {
             require("karma-webpack"),
             require("istanbul-instrumenter-loader"),
             require("karma-mocha"),
+            require("karma-source-map-support"),
             require("karma-coverage"),
             require("karma-phantomjs-launcher"),
             require("karma-spec-reporter"),
