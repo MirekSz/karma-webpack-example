@@ -52,7 +52,7 @@ module.exports = function (config) {
         },
 
         webpackMiddleware: {
-            noInfo: false
+            noInfo: true
         },
 
         plugins: [
