@@ -28,8 +28,8 @@ module.exports = function (config) {
         },
         singleRun: true,
         coverageReporter: {
-            type: 'html',
-            dir: 'build/coverage/'
+            type: 'cobertura',
+            dir: 'coverage/'
         },
 
         webpack: {
@@ -38,7 +38,11 @@ module.exports = function (config) {
                 loaders: [
                     {test: /\.css$/, loader: "style!css"},
                     {test: /\.es6$/, loader: "babel"},
-                    {test: /\.less$/, loader: "style!css!less"}
+                    {test: /\.less$/, loader: "style!css!less"},
+                    {
+                        test: /\.hbs/,
+                        loader: "handlebars-loader"
+                    }
                 ],
                 postLoaders: [{
                     test: /\.js/,
