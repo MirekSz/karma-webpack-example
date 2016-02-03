@@ -22,7 +22,15 @@ describe("hexColorLuminance", function () {
     it("should add div ", function () {
         $(document.body).append('<div id="workspace"></div>');
         var work = $("#workspace")
-        expect(work).not.be.empty;
+        expect(work.length).to.be.gt(0);
     });
+
+
+    it("should find added div ", function () {
+
+        var work = $("#samil")
+        expect(work.length).to.be.gt(0);
+    });
+
 
 });
