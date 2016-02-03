@@ -6,7 +6,8 @@ module.exports = function (config) {
             // all files ending in "test"
             './node_modules/jquery/dist/jquery.js',
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            './test/**/*.js'
+            './test/**/*.js',
+            './test/**/*.es6'
             // each file acts as entry point for the webpack configuration
         ],
 
@@ -16,7 +17,8 @@ module.exports = function (config) {
         preprocessors: {
             // only specify one entry point
             // and require all tests in there
-            './test/**/*.js': ['webpack']
+            './test/**/*.js': ['webpack'],
+            './test/**/*.es6': ['webpack']
         },
 
         reporters: ['spec', 'junit', 'coverage'],
@@ -35,6 +37,7 @@ module.exports = function (config) {
             module: {
                 loaders: [
                     {test: /\.css$/, loader: "style!css"},
+                    {test: /\.es6$/, loader: "babel"},
                     {test: /\.less$/, loader: "style!css!less"}
                 ],
                 postLoaders: [{
