@@ -19,4 +19,10 @@ describe("hexColorLuminance", function () {
         expect(finded).not.be.empty;
     });
 
+    it("should add div ", function () {
+        $(document.body).append('<div id="workspace"></div>');
+        var work = $("#workspace")
+        expect(work).not.be.empty;
+    });
+
 });

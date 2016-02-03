@@ -31,6 +31,7 @@
     "gulp": "^3.8.11",
     "istanbul": "^0.3.13",
     "istanbul-instrumenter-loader": "^0.1.2",
+    "jquery": "^2.2.0",
     "karma-coverage": "^0.2.7",
     "karma-junit-reporter": "^0.3.8",
     "karma-mocha": "^0.1.10",
