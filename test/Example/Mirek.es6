@@ -13,9 +13,9 @@ describe("ES6", function () {
     })
     it("should load google ajax", function (done) {
         request
-            .get('www.googe.pl')
+            .get('/')
             .end(function (err, res) {
-                console.log(res.body);
+            expect(res.statusCode).to.be.eq(200)
                 done();
             });
     })

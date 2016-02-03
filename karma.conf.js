@@ -70,6 +70,7 @@ module.exports = function (config) {
             require("karma-source-map-support"),
             require("karma-coverage"),
             require("karma-phantomjs-launcher"),
+            require("karma-chrome-launcher"),
             require("karma-spec-reporter"),
             require("karma-junit-reporter"),
             require("karma-sourcemap-loader")
