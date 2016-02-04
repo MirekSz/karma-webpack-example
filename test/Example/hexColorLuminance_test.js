@@ -1,7 +1,7 @@
 var chai = require('../../node_modules/chai/chai');
 import Mirek from './Mirek';
 var expect = chai.expect;
-
+var m = new Map();
 var hexColorLuminance = require('../../src/Example/hexColorLuminance');
 
 describe("hexColorLuminance", function () {
