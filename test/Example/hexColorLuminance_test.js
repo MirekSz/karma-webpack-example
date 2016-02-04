@@ -1,5 +1,5 @@
 var chai = require('../../node_modules/chai/chai');
-import Mirek from './Mirek.es6';
+import Mirek from './Mirek';
 var expect = chai.expect;
 
 var hexColorLuminance = require('../../src/Example/hexColorLuminance');
