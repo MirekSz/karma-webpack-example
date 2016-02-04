@@ -1,3 +1,5 @@
+"use strict";
+
 import chai from 'chai';
 var expect = chai.expect;
 import request from 'superagent';

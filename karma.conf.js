@@ -6,8 +6,7 @@ module.exports = function (config) {
             // all files ending in "test"
             './node_modules/jquery/dist/jquery.js',
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
-            './test/**/*.js',
-            './test/**/*.es6'
+            './test/test.js'
             // each file acts as entry point for the webpack configuration
         ],
 
@@ -37,7 +36,18 @@ module.exports = function (config) {
             module: {
                 loaders: [
                     {test: /\.css$/, loader: "style!css"},
-                    {test: /\.es6$/, loader: "babel"},
+                    {
+                        test: /\.es6$/, loader: "babel", query: {
+                        presets: ['es2015']
+                    },
+                        exclude: /node_modules/
+                    },
+                    {
+                        test: /\.js$/, loader: "babel", query: {
+                        presets: ['es2015']
+                    },
+                        exclude: /node_modules/
+                    },
                     {test: /\.less$/, loader: "style!css!less"},
                     {
                         test: /\.hbs/,
@@ -51,6 +61,7 @@ module.exports = function (config) {
                 }]
             },
             resolve: {
+                extensions: ['', '.js', '.es6'],
                 modulesDirectories: [
                     "",
                     "src",
